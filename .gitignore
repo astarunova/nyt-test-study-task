@@ -1,0 +1,11 @@
+# Gradle
+build/
+.gradle
+gradle/tools
+
+# IntelliJ IDEA
+*.i??
+.idea
+!*.ico
+**/out
+**/classes
