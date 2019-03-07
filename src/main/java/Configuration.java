@@ -3,8 +3,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
 import java.io.*;
+import java.util.logging.Logger;
 
 public class Configuration {
+    Logger log = Logger.getLogger(Configuration.class.getName());
 
     public static Properties confProperties() {
         Properties prop = new Properties();
@@ -16,16 +18,16 @@ public class Configuration {
         return prop;
     }
 
-    public static void setProp(String keyToSet, String valueToSet) {
+    public void setProp(String keyToSet, String valueToSet) {
         confProperties().setProperty(keyToSet, valueToSet);
     }
 
-    public static Properties getProps() {
-        System.out.println(confProperties().size() + " properties found:");
+    public Properties getProps() {
+       log.info(confProperties().size() + " properties found:");
         return confProperties();
     }
 
-    public static String getProp(String propertyKey) {
+    public String getProp(String propertyKey) {
         return confProperties().getProperty(propertyKey);
     }
 

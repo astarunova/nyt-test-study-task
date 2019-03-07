@@ -11,16 +11,18 @@ import static io.restassured.RestAssured.*;
 import java.io.*;
 import java.util.Properties;
 
-public class NytApiTest extends Configuration{
+public class NytApiTest {
+
+Configuration propConf = new Configuration();
 
     @BeforeClass
     public void setup() {
-        baseURI = getProp("base.url");
+        baseURI = propConf.getProp("base.url");
     }
     @Test
     public void getMostEmailedArticles() {
         given().log().all().
-                param("api-key", getProp("api.key")).
+                param("api-key", propConf.getProp("api.key")).
         when().
                 get("/svc/mostpopular/v2/emailed/{period}.json", 1).
                 then().log().body().statusCode(200);
