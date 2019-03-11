@@ -1,8 +1,6 @@
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+package tests;
+
 import java.util.Properties;
-import java.io.*;
 import java.util.logging.Logger;
 
 public class Configuration {
@@ -11,7 +9,7 @@ public class Configuration {
     public static Properties confProperties() {
         Properties prop = new Properties();
         try {
-            prop.load(Configuration.class.getResourceAsStream("config.properties"));
+            prop.load(Configuration.class.getResourceAsStream("/config.properties"));
         } catch (Exception e) {
             System.err.println("File does not exist");
         }

@@ -22,4 +22,6 @@ dependencies {
     testCompile 'io.rest-assured:json-schema-validator:3.3.0'
     compile 'org.json:json:20171018'
     compile group: 'org.testng', name: 'testng', version: '6.9.10'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
 }
