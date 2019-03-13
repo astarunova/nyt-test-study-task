@@ -16,6 +16,9 @@ test {
 }
 
 dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-core:2.6.3'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
     testCompile 'io.rest-assured:rest-assured:3.3.0'
     compile 'io.rest-assured:json-path:3.3.0'
     compile 'io.rest-assured:xml-path:3.3.0'

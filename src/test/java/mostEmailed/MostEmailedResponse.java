@@ -6,14 +6,15 @@ import mostEmailed.entities.Result;
 import java.util.ArrayList;
 
 @Data
-@NoArgsConstructor
-
+@Getter @Setter
 public class MostEmailedResponse {
 
     private String status;
     private String copyright;
     private int num_results;
     private ArrayList<Result> results;
+
+    public MostEmailedResponse() {}
 
     public MostEmailedResponse(String status, String copyright, int num_results, ArrayList<Result> results) {
         this.status = status;
