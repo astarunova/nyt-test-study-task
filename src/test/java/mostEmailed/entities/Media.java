@@ -8,29 +8,29 @@ import lombok.*;
 import java.util.ArrayList;
 
 @Data
-@Getter @Setter
 public class Media {
 
+    @JsonProperty("type")
     private String type;
+    @JsonProperty("subtype")
     private String subtype;
+    @JsonProperty("caption")
     private String caption;
+    @JsonProperty("copyright")
     private String copyright;
-    private int approved_for_syndication;
+    @JsonProperty("approved_for_syndication")
+    private int approvedForSyndication;
     @JsonProperty("media-metadata")
-    private ArrayList<MediaMetadata> media_metadata;
+    private ArrayList<MediaMetadata> mediaMetadata;
 
     public Media() {}
 
-    public Media(String type, String subtype, String caption, String copyright, int approved_for_syndication, ArrayList<MediaMetadata> media_metadata) {
+    public Media(String type, String subtype, String caption, String copyright, int approvedForSyndication, ArrayList<MediaMetadata> mediaMetadata) {
         this.type = type;
         this.subtype = subtype;
         this.caption = caption;
         this.copyright = copyright;
-        this.approved_for_syndication = approved_for_syndication;
-        this.media_metadata = media_metadata;
-    }
-    @JsonSetter("media-metadata")
-    public void setMedia_metadata(ArrayList<MediaMetadata> media_metadata) {
-        this.media_metadata = media_metadata;
+        this.approvedForSyndication = approvedForSyndication;
+        this.mediaMetadata = mediaMetadata;
     }
 }

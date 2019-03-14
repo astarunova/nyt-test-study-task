@@ -1,14 +1,18 @@
 package mostEmailed.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @Data
-@Getter @Setter
 public class MediaMetadata {
 
+    @JsonProperty("url")
     private String url;
+    @JsonProperty("format")
     private String format;
+    @JsonProperty("height")
     private int height;
+    @JsonProperty("width")
     private int width;
 
     public MediaMetadata() {}
